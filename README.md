@@ -1,0 +1,1 @@
+Projeto Django usando Docker e Postgres
