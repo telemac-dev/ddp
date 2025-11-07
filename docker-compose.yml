@@ -1,6 +1,6 @@
 services:
-  djangoapp-1:
-    container_name: djangoapp-1
+  djangoapp:
+    container_name: djangoapp
     build:
       context: .
     ports:
@@ -12,9 +12,9 @@ services:
     env_file:
       - ./dotenv_files/.env
     depends_on:
-      - psql-1
-  psql-1:
-    container_name: psql-1
+      - psql
+  psql:
+    container_name: psql
     image: postgres:15-alpine
     volumes:
       - ./data/postgres/data:/var/lib/postgresql/data/
