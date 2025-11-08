@@ -8,6 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('', views.dashboard, name='dashboard'),
+    # Rota temporária para capturar todas as URLs /temp/
+    path('temp/', include('accounts.urls')),
     # ... outras URLs
 ]
 

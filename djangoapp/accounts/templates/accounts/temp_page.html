@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title|default:"Página em Desenvolvimento" }} - ERP System{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow-sm">
+        <div class="card-body text-center py-5">
+            <i class="bi bi-tools display-1 text-muted mb-4"></i>
+            <h2 class="card-title mb-4">Página em Desenvolvimento</h2>
+            <p class="card-text text-muted mb-4">
+                Esta página ({{ path }}) está atualmente em desenvolvimento.<br>
+                Em breve esta funcionalidade estará disponível!
+            </p>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">
+                <i class="bi bi-arrow-left me-2"></i>Voltar ao Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
