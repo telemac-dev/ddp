@@ -1,0 +1,28 @@
+{% load static %}
+{% load menu_tags %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Sistema ERP{% endblock %}</title>
+    
+    {% include 'includes/styles.html' %}
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% include 'includes/loading.html' %}
+    {% include 'includes/header.html' %}
+    {% include 'includes/sidebar.html' %}
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% include 'includes/messages.html' %}
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'includes/scripts.html' %}
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
